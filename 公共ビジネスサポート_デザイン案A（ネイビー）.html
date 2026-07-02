@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>公共ビジネスサポート株式会社｜官公庁・自治体ビジネスを、営業から実行まで。（デザイン案）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0E2A4E; --navy-d:#0A1F3A; --ink:#1A2433; --sub:#5A6675;
+  --gold:#B08D46; --gold-l:#C9A85F; --line:#D9DEE5; --bg:#F5F6F8; --paper:#FFFFFF;
+  --serif:"Noto Serif JP",serif; --sans:"Noto Sans JP",sans-serif; --en:"Cormorant Garamond",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.9;font-size:15px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.serif{font-family:var(--serif)}
+.en{font-family:var(--en);letter-spacing:.14em}
+
+/* top thin bar */
+.tbar{background:var(--navy-d);color:#C7D2E0;font-size:11.5px;letter-spacing:.06em}
+.tbar .wrap{display:flex;justify-content:space-between;align-items:center;height:34px}
+.tbar .lt span{margin-right:22px}
+.tbar b{color:#fff;font-weight:500}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:82px}
+.hd .logo img{height:54px;width:auto}
+nav.gnav{display:flex;align-items:center;gap:30px;font-size:13.5px;font-weight:500}
+nav.gnav a{color:var(--ink);padding:6px 0;border-bottom:2px solid transparent;transition:.25s}
+nav.gnav a:hover{color:var(--navy);border-bottom-color:var(--gold)}
+.navcta{background:var(--navy);color:#fff !important;padding:11px 24px;border-radius:3px;letter-spacing:.08em;border-bottom:none !important;transition:.3s}
+.navcta:hover{background:var(--gold)}
+.menubtn{display:none;font-size:24px;background:none;border:none;cursor:pointer;color:var(--ink)}
+
+/* hero */
+.hero{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
+.hero .bg{position:absolute;inset:0;background:url('images/photo_walk_mono.jpg') center 30%/cover no-repeat;filter:grayscale(1) contrast(1.05)}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,31,58,.94) 0%,rgba(14,42,78,.82) 46%,rgba(14,42,78,.38) 100%)}
+.hero-in{position:relative;z-index:2;color:#fff;padding:96px 0}
+.hero .kicker{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.3em;color:var(--gold-l);margin-bottom:26px}
+.hero .kicker::before{content:"";width:44px;height:1px;background:var(--gold-l)}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4.1vw,52px);line-height:1.55;letter-spacing:.05em}
+.hero h1 em{font-style:normal;color:var(--gold-l)}
+.hero .sub{margin-top:26px;font-size:15.5px;color:#D9E2EE;max-width:640px;line-height:2.15}
+.hero .btns{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 36px;font-size:14px;font-weight:700;letter-spacing:.1em;border-radius:3px;transition:.3s}
+.btn .ar{font-family:var(--en);font-weight:500}
+.btn.gold{background:var(--gold);color:#fff}
+.btn.gold:hover{background:var(--gold-l)}
+.btn.ghost{border:1px solid rgba(255,255,255,.65);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.btn.navy{background:var(--navy);color:#fff}
+.btn.navy:hover{background:var(--gold)}
+
+/* trust strip */
+.trust{background:var(--paper);border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);}
+.trust .t{padding:22px 18px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:3px}
+.trust .t:first-child{border-left:none}
+.trust .h{font-size:11px;letter-spacing:.18em;color:var(--gold);font-weight:700}
+.trust .v{font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.6}
+
+/* stats navy band */
+.stats{background:var(--navy);color:#fff;padding:64px 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats .s .num{font-family:var(--en);font-size:52px;font-weight:600;color:var(--gold-l);line-height:1.1}
+.stats .s .num small{font-family:var(--serif);font-size:20px;margin-left:4px}
+.stats .s .lb{margin-top:8px;font-size:12.5px;letter-spacing:.12em;color:#C7D2E0}
+.stats .s .nt{font-size:10.5px;color:#8FA2BA;margin-top:2px}
+
+/* section common */
+.sec{padding:96px 0}
+.sec.alt{background:var(--bg)}
+.shead{margin-bottom:52px}
+.shead .en-t{font-family:var(--en);font-size:13px;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:14px}
+.shead .en-t::after{content:"";width:52px;height:1px;background:var(--gold)}
+.shead h2{font-family:var(--serif);font-weight:600;font-size:clamp(24px,2.8vw,34px);letter-spacing:.06em;margin-top:14px;line-height:1.6}
+.shead p.lead{margin-top:16px;color:var(--sub);max-width:760px;font-size:14.5px}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.about .ph{position:relative}
+.about .ph img{width:100%;height:440px;object-fit:cover}
+.about .ph::after{content:"";position:absolute;left:-18px;bottom:-18px;width:60%;height:60%;border:1px solid var(--gold);z-index:-1}
+.about h3{font-family:var(--serif);font-size:22px;font-weight:600;line-height:1.9;margin-bottom:18px;letter-spacing:.04em}
+.about p{color:var(--sub);font-size:14.5px;margin-bottom:14px}
+.about ul{margin:22px 0 30px;display:grid;gap:12px}
+.about li{list-style:none;padding-left:30px;position:relative;font-weight:500;font-size:14.5px}
+.about li::before{content:"";position:absolute;left:0;top:11px;width:16px;height:1.5px;background:var(--gold)}
+
+/* services */
+.svcs{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.svc{background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column;transition:.3s}
+.svc:hover{box-shadow:0 18px 44px rgba(14,42,78,.12);transform:translateY(-3px)}
+.svc .ph{height:210px;overflow:hidden;position:relative}
+.svc .ph img{width:100%;height:100%;object-fit:cover;transition:1.2s}
+.svc:hover .ph img{transform:scale(1.05)}
+.svc .no{position:absolute;left:0;top:0;background:var(--navy);color:var(--gold-l);font-family:var(--en);font-size:15px;letter-spacing:.1em;padding:8px 16px}
+.svc .bd{padding:26px 28px 30px;display:flex;flex-direction:column;flex:1}
+.svc h3{font-family:var(--serif);font-size:18.5px;font-weight:600;letter-spacing:.05em;margin-bottom:4px}
+.svc .tag{font-size:11px;letter-spacing:.14em;color:var(--gold);font-weight:700;margin-bottom:12px}
+.svc p{color:var(--sub);font-size:13.5px;flex:1}
+.svc .more{margin-top:18px;font-size:12.5px;font-weight:700;color:var(--navy);display:inline-flex;align-items:center;gap:8px;letter-spacing:.1em}
+.svc .more::after{content:"→";font-family:var(--en);transition:.25s}
+.svc:hover .more::after{transform:translateX(5px)}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:fl}
+.fl{background:var(--paper);border-top:3px solid var(--navy);border:1px solid var(--line);border-top:3px solid var(--navy);padding:24px 18px 22px;position:relative}
+.fl .n{font-family:var(--en);font-size:26px;color:var(--gold);line-height:1}
+.fl h4{font-size:14px;font-weight:700;margin:10px 0 8px;letter-spacing:.04em}
+.fl p{font-size:11.5px;color:var(--sub);line-height:1.8}
+.fl::after{content:"›";position:absolute;right:-13px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:20px;z-index:2}
+.fl:last-child::after{content:none}
+
+/* results table */
+.rtable{width:100%;border-collapse:collapse;background:var(--paper);font-size:13px}
+.rtable th{background:var(--navy);color:#fff;font-weight:500;letter-spacing:.08em;padding:13px 16px;font-size:12.5px;text-align:left}
+.rtable td{border-bottom:1px solid var(--line);padding:14px 16px;vertical-align:top}
+.rtable tr:hover td{background:#F2F5F9}
+.rtable .y{white-space:nowrap;font-family:var(--en);font-size:14px;color:var(--navy);font-weight:600}
+.rtable .org{white-space:nowrap}
+.rtable .amt{white-space:nowrap;text-align:right;font-weight:700;color:var(--navy)}
+.rnote{font-size:11.5px;color:var(--sub);margin-top:12px}
+.partners{margin-top:34px;border-top:1px solid var(--line);padding-top:22px;display:flex;flex-wrap:wrap;gap:12px 34px;align-items:center}
+.partners .h{font-size:11.5px;letter-spacing:.2em;color:var(--gold);font-weight:700}
+.partners span{font-size:13.5px;color:var(--sub);font-weight:500}
+
+/* seminar cta */
+.seminar{position:relative;overflow:hidden;color:#fff}
+.seminar .bg{position:absolute;inset:0;background:url('images/photo_seminar.jpg') center/cover no-repeat}
+.seminar .veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,31,58,.95) 0%,rgba(10,31,58,.86) 55%,rgba(10,31,58,.55) 100%)}
+.seminar .wrap{position:relative;z-index:2;padding:84px 24px}
+.seminar .en-t{font-family:var(--en);font-size:13px;letter-spacing:.34em;color:var(--gold-l)}
+.seminar h2{font-family:var(--serif);font-size:clamp(22px,2.6vw,32px);font-weight:600;margin:14px 0 16px;letter-spacing:.05em}
+.seminar p{color:#D9E2EE;max-width:640px;font-size:14.5px;margin-bottom:8px}
+.seminar .price{font-family:var(--serif);font-size:19px;color:var(--gold-l);margin:14px 0 30px}
+.seminar .price small{font-size:12px;color:#C7D2E0;margin-left:10px}
+
+/* column */
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.col-c{background:var(--paper);border:1px solid var(--line);transition:.3s}
+.col-c:hover{box-shadow:0 16px 40px rgba(14,42,78,.1)}
+.col-c .ph{height:170px;overflow:hidden}
+.col-c .ph img{width:100%;height:100%;object-fit:cover}
+.col-c .bd{padding:20px 22px 24px}
+.col-c .cat{font-size:10.5px;letter-spacing:.16em;color:var(--gold);font-weight:700}
+.col-c h4{font-size:14px;font-weight:700;line-height:1.75;margin:8px 0 10px}
+.col-c .dt{font-family:var(--en);font-size:12px;color:var(--sub)}
+
+/* cta band */
+.ctaband{background:linear-gradient(120deg,var(--navy-d),var(--navy));color:#fff;text-align:center;padding:88px 24px}
+.ctaband .en-t{font-family:var(--en);font-size:13px;letter-spacing:.34em;color:var(--gold-l)}
+.ctaband h2{font-family:var(--serif);font-size:clamp(22px,2.8vw,34px);font-weight:600;margin:16px 0 14px;letter-spacing:.06em}
+.ctaband p{color:#C7D2E0;font-size:14px;max-width:620px;margin:0 auto 34px}
+.ctaband .btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* footer */
+footer{background:var(--navy-d);color:#AEBCCD;padding:64px 0 0;font-size:13px}
+.fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:44px;padding-bottom:44px}
+.fgrid .logo{background:#fff;display:inline-block;padding:10px 16px;border-radius:3px;margin-bottom:18px}
+.fgrid .logo img{height:40px}
+.fgrid dl{display:grid;grid-template-columns:86px 1fr;gap:6px 10px;font-size:12.5px}
+.fgrid dt{color:#7E90A6}
+.fcol h5{font-family:var(--en);color:var(--gold-l);letter-spacing:.24em;font-size:13px;margin-bottom:16px}
+.fcol a{display:block;padding:5px 0;color:#AEBCCD;transition:.25s;font-size:13px}
+.fcol a:hover{color:#fff}
+.copy{border-top:1px solid rgba(255,255,255,.12);padding:20px 0;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.08em;color:#7E90A6}
+
+/* reveal */
+.rv{opacity:1;transform:none}
+body.js .rv{opacity:0;transform:translateY(26px);transition:.9s cubic-bezier(.2,.7,.2,1)}
+body.js .rv.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .trust .wrap{grid-template-columns:repeat(2,1fr)}
+  .trust .t{border-left:none;border-top:1px solid var(--line)}
+  .stats .wrap{grid-template-columns:repeat(2,1fr);gap:34px 12px}
+  .about .wrap{grid-template-columns:1fr;gap:44px}
+  .svcs{grid-template-columns:1fr}
+  .flow{grid-template-columns:1fr;gap:10px}
+  .fl::after{content:none}
+  .cols3{grid-template-columns:1fr}
+  nav.gnav{display:none}
+  .menubtn{display:block}
+  .fgrid{grid-template-columns:1fr}
+  .tbar .rt{display:none}
+}
+</style>
+</head>
+<body class="herolight">
+<div class="tbar">
+  <div class="wrap">
+    <div class="lt"><span>全省庁統一資格（役務の提供等）保有</span><span>プライバシーマーク取得</span></div>
+    <div class="rt"><b>官公庁・自治体ビジネスの専門ファーム</b></div>
+  </div>
+</div>
+
+<header id="hdr">
+  <div class="wrap hd">
+    <a href="#top" class="logo"><img src="images/logo.png" alt="公共ビジネスサポート株式会社"></a>
+    <nav class="gnav">
+      <a href="#about">私たちについて</a>
+      <a href="#service">サービス</a>
+      <a href="#results">実績</a>
+      <a href="#seminar">セミナー</a>
+      <a href="#column">コラム</a>
+      <a href="#contact" class="navcta">無料相談</a>
+    </nav>
+    <button class="menubtn" id="mbtn">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="bg"></div><div class="veil"></div>
+  <div class="wrap hero-in">
+    <div class="kicker">PUBLIC BUSINESS SUPPORT</div>
+    <h1>官公庁・自治体ビジネスを、<br><em>営業から実行まで</em>、ワンストップで。</h1>
+    <p class="sub">公共ビジネスに特化した専門ノウハウと実務経験を活かし、自治体提案、官公庁営業、入札・提案書対応、案件推進まで伴走します。中央省庁からの受託実績を持つ、実務に強い専門ファームです。</p>
+    <div class="btns">
+      <a href="#contact" class="btn gold">無料相談・お問い合わせ <span class="ar">→</span></a>
+      <a href="#seminar" class="btn ghost">ミニセミナーを申し込む <span class="ar">→</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap">
+    <div class="t"><span class="h">GOVERNMENT</span><span class="v">経済産業省・中小企業庁からの受託実績</span></div>
+    <div class="t"><span class="h">NETWORK</span><span class="v">300名超の専門家・連携者ネットワーク</span></div>
+    <div class="t"><span class="h">SECURITY</span><span class="v">プライバシーマーク取得の情報管理体制</span></div>
+    <div class="t"><span class="h">QUALIFICATION</span><span class="v">全省庁統一資格（役務の提供等）保有</span></div>
+  </div>
+</div>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="s rv"><div class="num">5<small>件</small></div><div class="lb">中央省庁からの受託案件</div><div class="nt">※2024年以降・公開調達情報より</div></div>
+    <div class="s rv"><div class="num">3<small>年度連続</small></div><div class="lb">中央省庁案件を継続受託</div><div class="nt">※令和6〜8年度・公開調達情報より</div></div>
+    <div class="s rv"><div class="num">300<small>名超</small></div><div class="lb">専門家・連携者ネットワーク</div><div class="nt"></div></div>
+    <div class="s rv"><div class="num">2020</div><div class="lb">設立（東京都千代田区）</div><div class="nt"></div></div>
+  </div>
+</section>
+
+<section class="sec about" id="about">
+  <div class="wrap">
+    <div>
+      <div class="shead" style="margin-bottom:30px">
+        <div class="en-t">About Us</div>
+        <h2>公共ビジネスの「実務」に強い、<br>専門コンサルティングファーム</h2>
+      </div>
+      <h3>売り込む戦略から、受注後の実行まで。<br>自ら公的案件を受託しているから、実務で語れる。</h3>
+      <p>公共ビジネスサポートは、官公庁・自治体ビジネスに参入したい企業、自治体営業を強化したい企業、公共案件の提案・実行に課題を持つ企業を支援する専門ファームです。</p>
+      <p>私たち自身が中小企業庁・経済産業省の調査事業等を受託し、報告書を納品してきた「公共調達のプレイヤー」でもあります。評論ではなく、実際に落札し、納品してきた実務知見で伴走します。</p>
+      <ul>
+        <li>予算・調達情報の収集と分析にもとづく営業戦略設計</li>
+        <li>提案書・入札対応など、受注に直結する実務支援</li>
+        <li>300名超の専門家ネットワークによる案件実行体制</li>
+      </ul>
+      <a href="#service" class="btn navy">サービスを見る <span class="ar">→</span></a>
+    </div>
+    <div class="ph rv"><img src="images/photo_building_green.jpg" alt="オフィス街"></div>
+  </div>
+</section>
+
+<section class="sec alt" id="service">
+  <div class="wrap">
+    <div class="shead">
+      <div class="en-t">Service</div>
+      <h2>ご相談内容から選べる、4つの支援メニュー</h2>
+      <p class="lead">「これから公共市場に参入したい」から「目の前の案件を何とかしたい」まで。フェーズに合わせてお選びください。</p>
+    </div>
+    <div class="svcs">
+      <div class="svc rv">
+        <div class="ph"><span class="no">01</span><img src="images/photo_strategy.jpg" alt="公共ビジネス参入支援"></div>
+        <div class="bd">
+          <div class="tag">CONSULTING</div>
+          <h3>公共ビジネス参入・営業強化コンサルティング</h3>
+          <p>中央省庁・地方自治体向け営業の基本プロセスを独自に体系化。予算情報の収集、調達情報の分析、アライアンス構築まで、参入戦略の設計から伴走します。</p>
+          <span class="more">詳しく見る</span>
+        </div>
+      </div>
+      <div class="svc rv">
+        <div class="ph"><span class="no">02</span><img src="images/photo_consult.jpg" alt="個別案件支援"></div>
+        <div class="bd">
+          <div class="tag">PROJECT SUPPORT</div>
+          <h3>個別案件支援（提案・入札・実行）</h3>
+          <p>「この案件を取りたい」「受注したが推進に不安がある」——すぐ動く必要がある案件を個別に支援。提案書作成、入札対応、プロジェクト推進まで実務で支えます。</p>
+          <span class="more">詳しく見る</span>
+        </div>
+      </div>
+      <div class="svc rv">
+        <div class="ph"><span class="no">03</span><img src="images/photo_seminar.jpg" alt="ミニセミナー"></div>
+        <div class="bd">
+          <div class="tag">SEMINAR</div>
+          <h3>ミニセミナー（訪問型・導入前相談）</h3>
+          <p>公共ビジネスの基本と勘所を約2時間で。貴社に伺い、事業内容に即して「何から始めるべきか」を具体化します。3万円（税別）・ご成約時は費用充当。</p>
+          <span class="more">詳しく見る</span>
+        </div>
+      </div>
+      <div class="svc rv">
+        <div class="ph"><span class="no">04</span><img src="images/photo_seminar_note.jpg" alt="情報発信"></div>
+        <div class="bd">
+          <div class="tag">INSIGHT</div>
+          <h3>政策・調達インサイト（コラム／情報提供）</h3>
+          <p>公共営業、政策動向、制度改正、自治体調達のいまを継続発信。中央省庁・自治体向け営業の担当者、中小企業診断士など専門家の実務に役立つ情報をお届けします。</p>
+          <span class="more">詳しく見る</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="shead">
+      <div class="en-t">Process</div>
+      <h2>支援の流れ — 営業から実行まで、一気通貫</h2>
+    </div>
+    <div class="flow">
+      <div class="fl rv"><div class="n">01</div><h4>予算・調達情報の収集</h4><p>省庁・自治体の予算情報、調達計画を収集し、狙うべき領域を可視化します。</p></div>
+      <div class="fl rv"><div class="n">02</div><h4>調達分析・戦略設計</h4><p>過去の落札傾向・競合を分析し、貴社の強みが活きる参入戦略を設計します。</p></div>
+      <div class="fl rv"><div class="n">03</div><h4>提案書・入札対応</h4><p>要求仕様の読み解きから提案書作成、総合評価対策まで受注実務を支援します。</p></div>
+      <div class="fl rv"><div class="n">04</div><h4>受注・契約</h4><p>見積・契約実務、体制整備をサポート。公共特有の手続きも安心です。</p></div>
+      <div class="fl rv"><div class="n">05</div><h4>実行・納品伴走</h4><p>プロジェクト推進・報告書品質まで、専門家ネットワークとともに伴走します。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="results">
+  <div class="wrap">
+    <div class="shead">
+      <div class="en-t">Track Record</div>
+      <h2>中央省庁からの受託実績</h2>
+      <p class="lead">私たち自身が公共調達のプレイヤーです。2024年以降、公開調達情報で確認できる中央省庁からの受託は5件。調査事業から評価支援、実証事業、シンポジウム運営まで、令和6〜8年度にわたり継続的に受託しています。</p>
+    </div>
+    <div class="rv" style="overflow-x:auto">
+    <table class="rtable">
+      <thead><tr><th>受注時期</th><th>案件名</th><th>発注主体</th><th>調達方式</th></tr></thead>
+      <tbody>
+        <tr><td class="y">2024.08</td><td>令和6年度 中小企業実態調査事業（中小企業・小規模事業者の取組事例に関する調査事業）</td><td class="org">中小企業庁</td><td class="org">一般競争（総合評価）</td></tr>
+        <tr><td class="y">2025.05</td><td>令和7年度 中小企業実態調査事業（中小企業・小規模事業者の取組事例等に関する調査）</td><td class="org">経済産業省</td><td class="org">公開調達</td></tr>
+        <tr><td class="y">2025.09</td><td>令和7年度 経営発達支援計画の採点評価支援業務</td><td class="org">中小企業庁</td><td class="org">一般競争</td></tr>
+        <tr><td class="y">2025.12</td><td>令和7年度 中間・確定検査の補助による業務効率化に関する実証事業</td><td class="org">経済産業省</td><td class="org">一般競争</td></tr>
+        <tr><td class="y">2026.04</td><td>令和8年度 「パートナーシップ構築シンポジウム」運営業務</td><td class="org">経済産業省</td><td class="org">公開調達</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="rnote">※ 政府公開の調達情報（gBizINFO・各省庁の競争入札結果等）にもとづく。民間企業向けコンサルティング、地方自治体案件等は含みません。<br>※ 実績の掲載内容・範囲は、貴社のご意向に合わせて調整いたします。</p>
+    <div class="partners rv">
+      <span class="h">MAIN CLIENTS</span>
+      <span>中小企業庁</span><span>経済産業省</span><span>TOPPAN株式会社</span><span>東京都中小企業診断士協会</span><span>日本アプライドリサーチ研究所</span><span>読売IS</span>
+    </div>
+  </div>
+</section>
+
+<section class="seminar" id="seminar">
+  <div class="bg"></div><div class="veil"></div>
+  <div class="wrap">
+    <div class="en-t">Mini Seminar</div>
+    <h2>まずは2時間、「公共ビジネスの勘所」から。</h2>
+    <p>貴社にお伺いし、事業内容に即して官公庁・自治体ビジネスの始め方をご説明する訪問型ミニセミナー。導入前のご相談として、多くの企業さまにご利用いただいています。</p>
+    <div class="price">約2時間 ／ 30,000円（税別）<small>※ご成約の場合はコンサルティング費用に充当</small></div>
+    <a href="#contact" class="btn gold">ミニセミナーを申し込む <span class="ar">→</span></a>
+  </div>
+</section>
+
+<section class="sec" id="column">
+  <div class="wrap">
+    <div class="shead">
+      <div class="en-t">Column</div>
+      <h2>政策・公共調達のいまを読む</h2>
+      <p class="lead">公共営業・政策動向・制度改正・自治体調達に関する実務コラムを継続発信しています。</p>
+    </div>
+    <div class="cols3">
+      <a class="col-c rv" href="#">
+        <div class="ph"><img src="images/photo_charts.jpg" alt=""></div>
+        <div class="bd"><div class="cat">政策動向</div><h4>「100億企業」の次は「10億企業」創出へ。政府の狙いを読む</h4><div class="dt">2026.06</div></div>
+      </a>
+      <a class="col-c rv" href="#">
+        <div class="ph"><img src="images/photo_document.jpg" alt=""></div>
+        <div class="bd"><div class="cat">制度改正</div><h4>「下請法」は「取適法」へ。中小企業診断士が活かせる支援の視点</h4><div class="dt">2026.05</div></div>
+      </a>
+      <a class="col-c rv" href="#">
+        <div class="ph"><img src="images/photo_file.jpg" alt=""></div>
+        <div class="bd"><div class="cat">自治体調達</div><h4>自治体のIT機器調達に新ルール。公共ビジネスへの影響を整理する</h4><div class="dt">2026.04</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="ctaband" id="contact">
+  <div class="en-t">Contact</div>
+  <h2>公共ビジネスの一歩目を、私たちと。</h2>
+  <p>「何から始めればよいか分からない」段階のご相談も歓迎です。貴社の事業内容をお聞かせいただければ、公共市場での可能性を一緒に整理します。</p>
+  <div class="btns">
+    <a href="#" class="btn gold">無料相談・お問い合わせ <span class="ar">→</span></a>
+    <a href="#seminar" class="btn ghost">ミニセミナーについて <span class="ar">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="logo"><img src="images/logo.png" alt="公共ビジネスサポート株式会社"></div>
+        <dl>
+          <dt>会社名</dt><dd>公共ビジネスサポート株式会社</dd>
+          <dt>所在地</dt><dd>東京都千代田区神田三崎町2-17-8</dd>
+          <dt>設立</dt><dd>2020年5月</dd>
+          <dt>代表者</dt><dd>代表取締役　大嶺 卓也</dd>
+        </dl>
+      </div>
+      <div class="fcol">
+        <h5>SERVICE</h5>
+        <a href="#service">公共ビジネス参入コンサルティング</a>
+        <a href="#service">個別案件支援</a>
+        <a href="#seminar">ミニセミナー</a>
+        <a href="#column">コラム</a>
+      </div>
+      <div class="fcol">
+        <h5>COMPANY</h5>
+        <a href="#about">私たちについて</a>
+        <a href="#results">実績</a>
+        <a href="#contact">お問い合わせ</a>
+        <a href="#">プライバシーポリシー</a>
+      </div>
+    </div>
+    <div class="copy"><span>© Public Business Support Co., Ltd. All Rights Reserved.</span><span>DESIGN PROPOSAL</span></div>
+  </div>
+</footer>
+
+<script>
+document.body.classList.add('js');
+var mb=document.getElementById('mbtn');
+if(mb)mb.addEventListener('click',function(){var g=document.querySelector('.gnav');g.style.cssText='display:flex;flex-direction:column;position:absolute;top:82px;right:24px;background:#fff;border:1px solid var(--line);padding:18px 26px;border-radius:6px;gap:12px;box-shadow:0 16px 40px rgba(14,42,78,.18)';});
+var rvs=document.querySelectorAll('.rv');
+function showAll(){rvs.forEach(function(e){e.classList.add('in')});}
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.1});
+  rvs.forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight){e.classList.add('in');}else{io.observe(e);}});
+  setTimeout(showAll,2400);
+}else{showAll();}
+addEventListener('load',function(){setTimeout(showAll,1400)});
+</script>
+</body>
+</html>

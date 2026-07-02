@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>ワイヤーフレーム（トップページ）｜公共ビジネスサポート株式会社 リニューアル提案</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;700&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E2A4E;--ink:#1A2433;--sub:#5A6675;--gold:#B08D46;--line:#D9DEE5;--bg:#F5F6F8;
+--wf-bg:#EDEFF2;--wf-bd:#B9C2CC;--wf-dark:#454F5B;--wf-img:repeating-linear-gradient(45deg,#DDE2E8,#DDE2E8 8px,#E9EDF1 8px,#E9EDF1 16px);
+--serif:"Noto Serif JP",serif;--sans:"Noto Sans JP",sans-serif;--en:"Cormorant Garamond",serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;font-size:13px;padding:48px 24px 80px}
+.sheet{max-width:1240px;margin:0 auto}
+.head{border-left:5px solid var(--gold);padding-left:18px;margin-bottom:10px}
+.head .en{font-family:var(--en);letter-spacing:.3em;color:var(--gold);font-size:13px}
+h1{font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:.04em}
+.meta{color:var(--sub);font-size:12px;margin:8px 0 36px;padding-left:23px}
+.cols{display:grid;grid-template-columns:1fr 330px;gap:36px;align-items:start}
+.wfcol h2{font-family:var(--serif);font-size:16px;margin:0 0 14px;letter-spacing:.06em;display:flex;align-items:center;gap:10px}
+.wfcol h2::before{content:"";width:26px;height:2px;background:var(--gold)}
+.frame{background:#fff;border:2px solid var(--wf-dark);border-radius:4px;overflow:hidden;box-shadow:0 10px 30px rgba(14,42,78,.08)}
+.blk{border-bottom:1px dashed var(--wf-bd);padding:12px 16px;position:relative}
+.blk:last-child{border-bottom:none}
+.blk .tagno{position:absolute;right:10px;top:8px;background:var(--navy);color:#fff;font-family:var(--en);font-size:11px;padding:1px 9px;border-radius:2px;letter-spacing:.08em}
+.lbl{font-size:11px;font-weight:700;color:var(--navy);letter-spacing:.1em;margin-bottom:6px}
+.ph{background:var(--wf-img);border:1px solid var(--wf-bd);display:flex;align-items:center;justify-content:center;color:#8A94A0;font-size:11px;letter-spacing:.14em}
+.bar{background:var(--wf-bg);border:1px solid var(--wf-bd);height:14px;border-radius:2px;margin:4px 0}
+.bar.w60{width:60%}.bar.w40{width:40%}.bar.w80{width:80%}.bar.hbig{height:26px;width:74%}
+.btn-wf{display:inline-block;background:var(--wf-dark);color:#fff;font-size:10.5px;padding:6px 18px;border-radius:2px;margin:6px 8px 0 0;letter-spacing:.1em}
+.btn-wf.o{background:#fff;color:var(--wf-dark);border:1.5px solid var(--wf-dark)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.cell{background:var(--wf-bg);border:1px solid var(--wf-bd);border-radius:2px;padding:8px;font-size:10px;color:var(--sub);text-align:center}
+.cell .cph{height:44px;background:var(--wf-img);border:1px solid var(--wf-bd);margin-bottom:6px}
+.tbl{width:100%;border-collapse:collapse;font-size:10px;color:var(--sub)}
+.tbl th{background:var(--wf-dark);color:#fff;padding:4px 6px;font-weight:500}
+.tbl td{border:1px solid var(--wf-bd);padding:4px 6px;background:#fff}
+.notes{position:sticky;top:24px}
+.notes h3{font-family:var(--serif);font-size:15px;margin-bottom:14px;letter-spacing:.06em;display:flex;align-items:center;gap:10px}
+.notes h3::before{content:"";width:26px;height:2px;background:var(--gold)}
+.note{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);padding:10px 14px;margin-bottom:10px;font-size:11.5px;color:var(--sub)}
+.note b{color:var(--ink);display:block;margin-bottom:2px}
+.note .no{display:inline-block;background:var(--navy);color:#fff;font-family:var(--en);font-size:10px;padding:0 7px;border-radius:2px;margin-right:6px}
+.spwrap{margin-top:56px}
+.spwrap h2{font-family:var(--serif);font-size:16px;margin-bottom:14px;letter-spacing:.06em;display:flex;align-items:center;gap:10px}
+.spwrap h2::before{content:"";width:26px;height:2px;background:var(--gold)}
+.sprow{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start}
+.spframe{width:270px;background:#fff;border:2px solid var(--wf-dark);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(14,42,78,.08)}
+.spframe .blk{padding:9px 11px}
+.spframe .lbl{font-size:9.5px}
+.spframe .ph{font-size:9px}
+.spnote{flex:1;min-width:260px}
+@media(max-width:980px){.cols{grid-template-columns:1fr}.notes{position:static}}
+</style>
+</head>
+<body>
+<div class="sheet">
+ <div class="head">
+  <div class="en">WIREFRAME — TOP PAGE</div>
+  <h1>公共ビジネスサポート株式会社　トップページ ワイヤーフレーム</h1>
+ </div>
+ <div class="meta">PC（1140pxコンテンツ幅）／SP（375〜390px）　※グレー斜線＝写真エリア（現サイト素材を使用）</div>
+
+ <div class="cols">
+  <div class="wfcol">
+   <h2>PC ワイヤー</h2>
+   <div class="frame">
+
+    <div class="blk"><span class="tagno">00</span>
+     <div class="lbl">インフォメーションバー（紺）</div>
+     <div class="bar w60"></div>
+    </div>
+
+    <div class="blk"><span class="tagno">01</span>
+     <div class="lbl">ヘッダー（ロゴ／グローバルナビ／CTAボタン）</div>
+     <div style="display:flex;gap:10px;align-items:center">
+      <div class="ph" style="width:120px;height:30px">LOGO</div>
+      <div class="bar" style="flex:1"></div>
+      <span class="btn-wf">無料相談</span>
+     </div>
+    </div>
+
+    <div class="blk"><span class="tagno">02</span>
+     <div class="lbl">ファーストビュー（写真背景＋紺オーバーレイ）</div>
+     <div class="ph" style="height:150px;flex-direction:column;gap:8px">
+      <div class="bar hbig" style="background:#fff"></div>
+      <div class="bar w60" style="background:#fff"></div>
+      <div>
+       <span class="btn-wf">無料相談・お問い合わせ</span>
+       <span class="btn-wf o">ミニセミナーを申し込む</span>
+      </div>
+     </div>
+    </div>
+
+    <div class="blk"><span class="tagno">03</span>
+     <div class="lbl">信頼バッジ（4カラム）</div>
+     <div class="grid4">
+      <div class="cell">省庁受託実績</div><div class="cell">300名超NW</div><div class="cell">Pマーク</div><div class="cell">全省庁統一資格</div>
+     </div>
+    </div>
+
+    <div class="blk"><span class="tagno">04</span>
+     <div class="lbl">数字で見る信頼（紺帯・4指標）</div>
+     <div class="grid4">
+      <div class="cell">受託5件</div><div class="cell">3年度連続</div><div class="cell">300名超</div><div class="cell">2020設立</div>
+     </div>
+    </div>
+
+    <div class="blk"><span class="tagno">05</span>
+     <div class="lbl">私たちについて（テキスト＋写真）</div>
+     <div class="grid2">
+      <div><div class="bar w80"></div><div class="bar"></div><div class="bar"></div><div class="bar w60"></div><span class="btn-wf">サービスを見る</span></div>
+      <div class="ph" style="height:90px">PHOTO</div>
+     </div>
+    </div>
+
+    <div class="blk"><span class="tagno">06</span>
+     <div class="lbl">サービス（相談内容別・4カード＋セミナーは別枠訴求）</div>
+     <div class="grid2">
+      <div class="cell"><div class="cph"></div>公共ビジネス参入・営業強化</div>
+      <div class="cell"><div class="cph"></div>個別案件支援（提案・入札・実行）</div>
+      <div class="cell"><div class="cph"></div>ミニセミナー</div>
+      <div class="cell"><div class="cph"></div>政策・調達インサイト</div>
+     </div>
+    </div>
+
+    <div class="blk"><span class="tagno">07</span>
+     <div class="lbl">支援の流れ（5ステップ）</div>
+     <div class="grid5">
+      <div class="cell">01 情報収集</div><div class="cell">02 調達分析</div><div class="cell">03 提案・入札</div><div class="cell">04 受注・契約</div><div class="cell">05 実行伴走</div>
+     </div>
+    </div>
+
+    <div class="blk"><span class="tagno">08</span>
+     <div class="lbl">実績（公開調達実績テーブル＋取引先）</div>
+     <table class="tbl">
+      <tr><th>受注時期</th><th>案件名</th><th>発注主体</th><th>調達方式</th></tr>
+      <tr><td>2024.08</td><td>令和6年度 中小企業実態調査事業…</td><td>中小企業庁</td><td>一般競争</td></tr>
+      <tr><td colspan="4">…（5件）＋ MAIN CLIENTS 取引先名列挙</td></tr>
+     </table>
+    </div>
+
+    <div class="blk"><span class="tagno">09</span>
+     <div class="lbl">ミニセミナー訴求（写真背景・紺）</div>
+     <div class="ph" style="height:70px;flex-direction:column"><div class="bar w60" style="background:#fff"></div><span class="btn-wf">ミニセミナーを申し込む</span></div>
+    </div>
+
+    <div class="blk"><span class="tagno">10</span>
+     <div class="lbl">コラム新着（3カード：カテゴリ／タイトル／日付）</div>
+     <div class="grid3">
+      <div class="cell"><div class="cph"></div>政策動向</div>
+      <div class="cell"><div class="cph"></div>制度改正</div>
+      <div class="cell"><div class="cph"></div>自治体調達</div>
+     </div>
+    </div>
+
+    <div class="blk"><span class="tagno">11</span>
+     <div class="lbl">お問い合わせCTA（紺グラデ・中央寄せ）</div>
+     <div style="text-align:center"><div class="bar hbig" style="margin:4px auto"></div>
+      <span class="btn-wf">無料相談・お問い合わせ</span><span class="btn-wf o">ミニセミナーについて</span></div>
+    </div>
+
+    <div class="blk"><span class="tagno">12</span>
+     <div class="lbl">フッター（会社情報／サービス／会社リンク＋コピーライト）</div>
+     <div class="grid3"><div class="cell">会社概要</div><div class="cell">SERVICE</div><div class="cell">COMPANY</div></div>
+    </div>
+
+   </div>
+  </div>
+
+  <aside class="notes">
+   <h3>設計メモ</h3>
+   <div class="note"><span class="no">02</span><b>FVで「何をしてくれる会社か」を直接表現</b>問いかけ型をやめ、「営業から実行までワンストップ」を明朝体で大きく。CTAは2段階（相談／セミナー）。</div>
+   <div class="note"><span class="no">03-04</span><b>信頼材料をページ上部へ集約</b>省庁実績・Pマーク・全省庁統一資格・専門家NWをFV直下に。金額は掲載せず件数・継続性で表現。</div>
+   <div class="note"><span class="no">06</span><b>サービスは「相談内容別」入口</b>参入したい／案件を取りたい／まず知りたい——ユーザーの状況から選べる並び。</div>
+   <div class="note"><span class="no">08</span><b>実績は官公庁調達らしい表組み</b>案件名・発注主体・調達方式を正確に。掲載範囲は貴社と調整可能な建付け。</div>
+   <div class="note"><span class="no">09</span><b>ミニセミナー＝中間ハードルの受け皿</b>いきなり相談しづらい層を3万円セミナーへ誘導し、成約時充当で背中を押す。</div>
+   <div class="note"><span class="no">10</span><b>コラムはSEOと信頼形成の入口</b>カテゴリラベル付きカード。記事下CTAからサービス・セミナーへ送客。</div>
+  </aside>
+ </div>
+
+ <div class="spwrap">
+  <h2>SP（375〜390px）ワイヤー</h2>
+  <div class="sprow">
+   <div class="spframe">
+    <div class="blk"><div class="lbl">ヘッダー（ロゴ＋☰）</div>
+     <div style="display:flex;gap:8px;align-items:center"><div class="ph" style="width:90px;height:24px">LOGO</div><div style="flex:1"></div><div class="ph" style="width:24px;height:24px">☰</div></div>
+    </div>
+    <div class="blk"><div class="lbl">FV（縦積み）</div>
+     <div class="ph" style="height:120px;flex-direction:column;gap:6px"><div class="bar w80" style="background:#fff"></div><div class="bar w60" style="background:#fff"></div></div>
+     <span class="btn-wf" style="display:block;text-align:center;margin-top:6px">無料相談・お問い合わせ</span>
+     <span class="btn-wf o" style="display:block;text-align:center">ミニセミナーを申し込む</span>
+    </div>
+    <div class="blk"><div class="lbl">信頼バッジ（2×2）→数字帯（2×2）</div>
+     <div class="grid2"><div class="cell">省庁実績</div><div class="cell">300名超</div><div class="cell">Pマーク</div><div class="cell">統一資格</div></div>
+    </div>
+    <div class="blk"><div class="lbl">About → サービス（1カラム縦積み）</div>
+     <div class="cell" style="margin-bottom:6px"><div class="cph"></div>サービスカード ×4</div>
+    </div>
+    <div class="blk"><div class="lbl">流れ（縦5ステップ）→実績（横スクロール表）</div>
+     <div class="bar"></div><div class="bar w80"></div>
+    </div>
+    <div class="blk"><div class="lbl">セミナー→コラム→CTA→フッター</div>
+     <div class="bar w60"></div><div class="bar w40"></div>
+    </div>
+   </div>
+   <div class="spnote">
+    <h3 style="font-family:var(--serif);font-size:15px;margin-bottom:12px">SP設計メモ</h3>
+    <div class="note"><b>CTAは全幅ボタンで固定的に</b>FV直下・セミナー帯・最下部の3か所。指が届く位置に主要CTA。</div>
+    <div class="note"><b>実績テーブルは横スクロール</b>表を崩さず`overflow-x`で対応（PC同等の正確さを維持）。</div>
+    <div class="note"><b>ナビはドロワー</b>☰から全ページへ。無料相談は常時ヘッダー内に表示。</div>
+   </div>
+  </div>
+ </div>
+</div>
+</body>
+</html>
